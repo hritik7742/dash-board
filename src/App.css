@@ -1,38 +1,243 @@
-.App {
-  text-align: center;
+*{
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+
+.dashboard {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.chart-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.chart-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.chart-column {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.chart-wrapper {
+  width: 100%;
+  height: 400px;
+ 
+  
+}
+
+.chart-containers {
+  width: 80%; /* Adjust the width as needed */
+  margin: 0 auto; /* Center the container horizontally */
+}
+
+.main-line-chart {
+  box-sizing: border-box;
+  display: block;
+  height: 339px;
+  padding: 33px;
+  width: 100%;
+  margin: auto;
+  border-radius: 14px;
+  box-shadow: 2px 6px 17px 5px lightgray;
+}
+
+@media (max-width: 767px) {
+  .main-line-chart {
+    height: 250px;
+    width: 100% !important;
+    padding: 20px !important;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+
+
+@media (min-width:600px) {
+  .chart-row {
+    flex-wrap: nowrap;
+  }
+
+  .chart-column {
+    width: auto;
+    margin-bottom: 0;
+    margin-right: 20px;
+  }
+
+  .chart-column:last-child {
+    margin-right: 0;
+  }
+
+  /* .chart-wrapper {
+    width: 400px;
+  }
+  .main-line-chart{
+    height: 355px;
+    width: 314px;
+} */
+  
+
+}
+
+
+
+.form {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  margin-bottom: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+}
+
+.label {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.input-field {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.submit-button {
+  padding: 10px 20px;
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.submit-button:hover {
+  background-color: #45a049;
+}
+
+
+.chart-wrapper P{
+      text-align: center;
+    padding-top: 35px;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.chart-wrapper{
+  width: 100%;
+    margin: auto;
+    
+}
+
+
+
+.dashboard-welcome button{
+  width: 103px;
+  height: 39px;
+  border: none;
+  /* background-color: #263145bf; */
+  color: white;
+  background-color: #0000ffd4;
+  font-size: 16px;
+  border-radius: 7px;
+}
+
+.dashboard-welcome h1{
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.dashboard-welcome h1 span{
+  color: yellow;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+
+.dashboard-welcome{
+  display: flex;
+  justify-content: space-between;
+  padding: 18px 29px 0px 29px;
+}
+
+
+
+nav{
+  background: #000000d6;
+    height: 75px;
+    margin-bottom: 33px;
+}
+
+
+/* login and signup css */
+
+/* AuthForm.css */
+
+.auth-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 100px;
+}
+
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 27px;
+  margin-top: 26px;
+}
+
+.auth-input {
+  padding: 10px;
+  margin-bottom: 29px;
+  width: 300px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.auth-button {
+  padding: 10px 20px;
+  background-color: #0088cc;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.auth-button:hover {
+  background-color: #006699;
+}
+
+.auth-link {
+  color: #0088cc;
+  text-decoration: none;
+}
+
+.auth-link:hover {
+  text-decoration: underline;
+}
+
+.auth-error {
+  color: red;
+  margin-top: 10px;
 }
